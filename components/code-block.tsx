@@ -14,7 +14,28 @@ export type CodeBlockProps = {
 
 export function CodeBlock({ code, language = "tsx", className, wrapLongLines = true }: CodeBlockProps) {
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    return (
+      <div className={className}>
+        <pre
+          className="rounded-lg border bg-muted/30 p-4 text-sm"
+          style={{
+            fontFamily:
+              "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+            margin: 0,
+          }}
+        >
+          {code.trim()}
+        </pre>
+      </div>
+    );
+  }
+
   const style = resolvedTheme === "dark" ? atomDark : oneLight;
+
   return (
     <div className={className}>
       <SyntaxHighlighter
