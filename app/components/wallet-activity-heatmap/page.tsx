@@ -1,25 +1,10 @@
 import ComponentShowcasePage from '@/components/component-showcase-page'
 import { WalletActivityHeatmap } from '@/components/wallet-activity-heatmap'
 
-const codeSample = `import React from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+const codeSample = `
 
-export function WalletActivityHeatmap() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Wallet Activity Heatmap</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="grid grid-cols-7 gap-1">
-          {Array.from({ length: 84 }).map((_, i) => (
-            <div key={i} className="h-4 w-4 rounded-sm bg-primary/20" />
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}`
+
+`
 
 const Page = () => {
     return (
@@ -28,12 +13,10 @@ const Page = () => {
             description="A simple grid-based heatmap to visualize wallet activity over time."
             preview={<WalletActivityHeatmap address="7mhcgF1DVsj5iv4CxZDgp51H6MBBwqamsH1KnqXhSRc5" />}
             code={{ language: 'tsx', content: codeSample }}
-            dependencies={['react', 'react-dom']}
-            devDependencies={['react-syntax-highlighter']}
+            dependencies={['dayjs', 'framer-motion']}
+            devDependencies={[]}
             notes={[
-                'Replace the placeholder grid with real activity data.',
-                'Use a color scale to represent intensity.',
-                'Make the component responsive and accessible.'
+                "This component requires a Helius API key. You can get one by signing up at https://helius.dev",
             ]}
         />
     )

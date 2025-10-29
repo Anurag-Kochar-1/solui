@@ -72,8 +72,8 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
           <CardTitle>Preview</CardTitle>
           <CardDescription>How it looks and behaves</CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="rounded-lg border bg-background p-4">
+        <CardContent className="overflow-auto">
+          <div className="rounded-lg border bg-background w-max p-4">
             {preview}
           </div>
         </CardContent>

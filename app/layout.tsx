@@ -49,6 +49,11 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </main>
+        <footer className="border-t border-border/50 mt-12">
+          <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-foreground/70">
+            © {new Date().getFullYear()} Sol UI
+          </div>
+        </footer>
       </body>
     </html>
   );
