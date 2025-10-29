@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import CodeBlock from "@/components/code-block";
+import { ModeToggle } from "@/components/theme-toggle";
 
 export type PackageSpec = string | { name: string; version?: string };
 
@@ -49,12 +50,21 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
   });
 
   return (
-    <div className="container mx-auto max-w-5xl px-4 py-8">
-      <div className="mb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">{name}</h1>
-        {description ? (
-          <p className="mt-1 text-sm text-muted-foreground">{description}</p>
-        ) : null}
+    <div className="container mx-auto max-w-5xl px-4">
+      <div className="sticky top-0 z-40 -mx-4 mb-6 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="mx-auto max-w-5xl px-4 py-3">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h1 className="text-2xl font-semibold tracking-tight">{name}</h1>
+              {description ? (
+                <p className="mt-0.5 text-sm text-muted-foreground">{description}</p>
+              ) : null}
+            </div>
+            <div className="flex items-center gap-2">
+              <ModeToggle />
+            </div>
+          </div>
+        </div>
       </div>
 
       <Card className="mb-8">
