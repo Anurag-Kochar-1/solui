@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 const HELIUS_KEY = process.env.NEXT_PUBLIC_HELIUS_API_KEY!;
 

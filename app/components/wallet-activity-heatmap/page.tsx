@@ -1,12 +1,11 @@
 import ComponentShowcasePage from '@/components/component-showcase-page'
-import { WalletActivityHeatmap } from '@/components/wallet-activity-heatmap'
-
-const codeSample = `
-
-
-`
+import { WalletActivityHeatmap } from '@/components/wallet-activity-heatmap/preview'
+import fs from 'fs'
+import path from 'path'
 
 const Page = () => {
+    const codePath = path.join(process.cwd(), 'components', 'wallet-activity-heatmap', 'code-sample.tsx')
+    const codeSample = fs.readFileSync(codePath, 'utf8')
     return (
         <ComponentShowcasePage
             name="Wallet Activity Heatmap"

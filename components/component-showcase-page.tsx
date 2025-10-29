@@ -20,14 +20,14 @@ export type ComponentShowcasePageProps = {
 };
 
 function formatPackage(pkg: PackageSpec): string {
-  if (typeof pkg === "string") return pkg;
+  if(typeof pkg === "string") return pkg;
   return pkg.version ? `${pkg.name}@${pkg.version}` : pkg.name;
 }
 
 function buildInstallCommand(manager: "npm" | "yarn" | "pnpm" | "bun", deps: PackageSpec[] = [], dev = false) {
   const list = deps.map(formatPackage).join(" ");
-  if (!list) return "";
-  switch (manager) {
+  if(!list) return "";
+  switch(manager) {
     case "npm":
       return dev ? `npm i -D ${list}` : `npm i ${list}`;
     case "yarn":
@@ -51,7 +51,7 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
 
   return (
     <div className="container mx-auto max-w-5xl px-4">
-      <div className="sticky top-0 z-40 -mx-4 mb-6 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="sticky top-0 z-40 -mx-4 mb-6 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="mx-auto max-w-5xl px-4 py-3">
           <div className="flex items-center justify-between gap-3">
             <div>
@@ -68,10 +68,6 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
       </div>
 
       <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>Preview</CardTitle>
-          <CardDescription>How it looks and behaves</CardDescription>
-        </CardHeader>
         <CardContent className="overflow-auto">
           <div className="rounded-lg border bg-background w-max p-4">
             {preview}
@@ -102,18 +98,8 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
         </CardContent>
       </Card>
 
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>Implementation</CardTitle>
-          <CardDescription>Copy-paste the code</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <CodeBlock code={code.content} language={code.language ?? "tsx"} />
-        </CardContent>
-      </Card>
-
       {notes.length > 0 ? (
-        <Card>
+        <Card className="mb-8">
           <CardHeader>
             <CardTitle>Notes</CardTitle>
             <CardDescription>Helpful context and caveats</CardDescription>
@@ -124,10 +110,22 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
                 <li key={i} className="text-muted-foreground">{note}</li>
               ))}
             </ul>
-            <Separator className="mt-4" />
+            {notes.length > 1 ? <Separator className="mt-4" /> : null}
           </CardContent>
         </Card>
       ) : null}
+
+      <Card className="mb-8">
+        <CardHeader>
+          <CardTitle>Implementation</CardTitle>
+          <CardDescription>Copy-paste the code</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <CodeBlock code={code.content} language={code.language ?? "tsx"} />
+        </CardContent>
+      </Card>
+
+
     </div>
   );
 }
