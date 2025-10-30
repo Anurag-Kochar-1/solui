@@ -30,23 +30,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main className="pt-16">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="pt-16">
             <Toaster richColors />
             {children}
-          </ThemeProvider>
-        </main>
-        <footer className="border-t border-border/50 mt-12">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-foreground/70">
-            © {new Date().getFullYear()} Sol UI
-          </div>
-        </footer>
+          </main>
+          <footer className="border-t border-border/50 mt-12">
+            <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-foreground/70">
+              © {new Date().getFullYear()} Sol UI
+            </div>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -5,7 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import CodeBlock from "@/components/code-block";
-import { ModeToggle } from "@/components/theme-toggle";
 
 export type PackageSpec = string | { name: string; version?: string };
 
@@ -50,7 +49,7 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
   });
 
   return (
-    <div className="container mx-auto max-w-5xl px-4">
+    <div className="container mx-auto max-w-5xl px-4 mt-20">
       <div className="mb-6 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="mx-auto max-w-5xl px-4 py-3">
           <div className="flex items-center justify-between gap-3">
@@ -59,9 +58,6 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
               {description ? (
                 <p className="mt-0.5 text-sm text-muted-foreground">{description}</p>
               ) : null}
-            </div>
-            <div className="flex items-center gap-2">
-              <ModeToggle />
             </div>
           </div>
         </div>
