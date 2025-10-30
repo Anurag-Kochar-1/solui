@@ -69,7 +69,7 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
 
       <Card className="mb-8">
         <CardContent className="overflow-auto">
-          <div className="rounded-lg border bg-background w-max p-4">
+          <div className="p-4 min-h-72 flex items-center w-full justify-center">
             {preview}
           </div>
         </CardContent>
