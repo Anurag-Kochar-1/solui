@@ -1,4 +1,4 @@
-import ComponentsGrid from "@/components/components-grid";
+ 
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
           </p>
           <div className="mt-9 flex items-center justify-center gap-3">
             <a
-              href="#components"
+              href="/components/wallet-activity-heatmap"
               className="inline-flex h-11 items-center justify-center rounded-md bg-foreground px-6 text-sm font-semibold text-background shadow transition-colors hover:opacity-90"
             >
               Explore Components
@@ -24,7 +24,7 @@ export default function Home() {
           <div className="mx-auto h-72 max-w-5xl rounded-[40%] bg-linear-to-b from-foreground/5 to-transparent blur-3xl" />
         </div>
       </section>
-      <ComponentsGrid />
+      
     </>
   );
 }

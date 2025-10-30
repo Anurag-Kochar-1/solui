@@ -11,7 +11,7 @@ const Page = () => {
             name="Connect Wallet"
             description="A simple button to connect a wallet."
             preview={<ConnectWallet />}
-            code={{ language: 'tsx', contentima: codeSample }}
+            code={{ language: 'tsx', content: codeSample }}
             dependencies={['@solana/wallet-adapter-react', '@solana/wallet-adapter-base', '@solana/wallet-adapter-react-ui', '@solana/wallet-adapter-wallets', '@solana/web3.js']}
             notes={[
                 "Set the NEXT_PUBLIC_ALCHEMY_RPC_URL environment variable to your Alchemy RPC URL. You can get one by signing up at https://www.alchemy.com",
