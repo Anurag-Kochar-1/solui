@@ -1,13 +1,6 @@
-"use client";
-
 import ComponentsGrid from "@/components/components-grid";
 
 export default function Home() {
-  function scrollToGrid() {
-    const el = document.getElementById("components-grid");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
   return (
     <>
       <section className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col items-center justify-center px-6 text-center sm:px-8">
@@ -19,12 +12,12 @@ export default function Home() {
             Personality-first components. Not the template stuff.
           </p>
           <div className="mt-9 flex items-center justify-center gap-3">
-            <button
-              onClick={scrollToGrid}
+            <a
+              href="#components"
               className="inline-flex h-11 items-center justify-center rounded-md bg-foreground px-6 text-sm font-semibold text-background shadow transition-colors hover:opacity-90"
             >
               Explore Components
-            </button>
+            </a>
           </div>
         </div>
         <div className="pointer-events-none absolute inset-x-0 -z-10 -translate-y-16 select-none">
