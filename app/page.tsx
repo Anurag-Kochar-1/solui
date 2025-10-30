@@ -1,4 +1,4 @@
-
+ 
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       <section className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col items-center justify-center px-6 text-center sm:px-8">
         <div className="mx-auto max-w-4xl">
           <h1 className="text-balance text-5xl font-extrabold sm:text-6xl md:text-7xl">
-            Not Your <span className="bg-red-600 text-white px-1 border-4 border-foreground">Boring</span> Solana UI Components
+            Not Your <span className="bg-red-600 text-white px-1 border-4 border-foreground">Boring</span> Solana UI Components:
           </h1>
           <p className="mt-5 text-pretty font-medium text-lg text-foreground/80 sm:text-xl">
             Personality-first components. Not the template stuff.
@@ -24,7 +24,7 @@ export default function Home() {
           <div className="mx-auto h-72 max-w-5xl rounded-[40%] bg-linear-to-b from-foreground/5 to-transparent blur-3xl" />
         </div>
       </section>
-
+      
     </>
   );
 }
