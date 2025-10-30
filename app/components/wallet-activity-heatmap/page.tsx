@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import ComponentShowcasePage from '@/components/component-showcase-page'
 import { WalletActivityHeatmap } from '@/components/wallet-activity-heatmap/preview'
 import fs from 'fs'
@@ -22,3 +23,8 @@ const Page = () => {
 }
 
 export default Page
+
+export const metadata: Metadata = {
+    title: 'Wallet Activity Heatmap',
+    description: 'A simple grid-based heatmap to visualize wallet activity over time.',
+}

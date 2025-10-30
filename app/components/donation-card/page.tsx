@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import ComponentShowcasePage from '@/components/component-showcase-page'
 import { DonationCard } from '@/components/donation-card/preview'
 
@@ -13,3 +14,8 @@ const Page = () => {
 }
 
 export default Page
+
+export const metadata: Metadata = {
+    title: 'Donation Card',
+    description: 'A simple card to display a donation campaign.',
+}

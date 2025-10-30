@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import ComponentShowcasePage from '@/components/component-showcase-page'
 import { ConnectWallet } from '@/components/connect-wallet/preview'
 import path from 'path'
@@ -21,3 +22,8 @@ const Page = () => {
 }
 
 export default Page
+
+export const metadata: Metadata = {
+    title: 'Connect Wallet',
+    description: 'A simple button to connect a wallet.',
+}

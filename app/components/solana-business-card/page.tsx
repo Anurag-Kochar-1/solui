@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import ComponentShowcasePage from '@/components/component-showcase-page'
 import { SolanaBusinessCard } from '@/components/solana business card/preview'
 import fs from 'fs'
@@ -15,3 +16,8 @@ const Page = () => {
 }
 
 export default Page
+
+export const metadata: Metadata = {
+    title: 'Solana Business Card',
+    description: 'A business card for a Solana.',
+}

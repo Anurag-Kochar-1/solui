@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import ComponentShowcasePage from '@/components/component-showcase-page'
 import path from 'path'
 import fs from 'fs'
@@ -21,3 +22,8 @@ const Page = () => {
 }
 
 export default Page
+
+export const metadata: Metadata = {
+    title: 'NFT Card',
+    description: 'A simple card to display an NFT minted on Solana.',
+}
