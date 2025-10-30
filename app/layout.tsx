@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://solui.xyz"),
   title: {
-    default: "Sol UI | Solana UI Components with Personality",
+    default: "Sol UI",
     template: "%s | Sol UI",
   },
   description: "Fun, bold, and unconventional Solana UI components. Not the boring stuff — copy-paste and ship.",
