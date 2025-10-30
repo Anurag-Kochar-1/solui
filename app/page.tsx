@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <section className="relative mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col items-center justify-center px-6 text-center sm:px-8">
         <div className="mx-auto max-w-4xl">
-          <h1 className="text-balance text-5xl font-extrabold sm:text-6xl md:text-7xl">
+          <h1 className="text-balance text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
             Not Your <span className="bg-red-600 text-white px-1 border-4 border-foreground">Boring</span> Solana UI Components:
           </h1>
           <p className="mt-5 text-pretty font-medium text-lg text-foreground/80 sm:text-xl">
