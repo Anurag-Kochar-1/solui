@@ -76,7 +76,7 @@ export function CodeBlock({ code, language = "tsx", className, wrapLongLines = t
         <button
           type="button"
           onClick={handleCopy}
-          className="inline-flex items-center rounded-md border bg-background px-2.5 py-1 text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+          className="inline-flex items-center rounded-md border bg-secondary text-secondary-foreground px-2.5 py-1 text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
           aria-label={copied ? "Copied" : "Copy to clipboard"}
         >
           {copied ? "Copied" : "Copy"}

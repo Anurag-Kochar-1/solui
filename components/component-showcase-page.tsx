@@ -51,7 +51,7 @@ export function ComponentShowcasePage({ name, description, preview, code, depend
 
   return (
     <div className="container mx-auto max-w-5xl px-4">
-      <div className="sticky top-0 z-40 -mx-4 mb-6 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
+      <div className="mb-6 border-b bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="mx-auto max-w-5xl px-4 py-3">
           <div className="flex items-center justify-between gap-3">
             <div>

@@ -15,7 +15,7 @@ const Page = () => {
             dependencies={['dayjs', 'framer-motion']}
             devDependencies={[]}
             notes={[
-                "This component requires a Helius API key. You can get one by signing up at https://helius.dev",
+                "Set the NEXT_PUBLIC_HELIUS_API_KEY environment variable to your Helius API key. You can get one by signing up at https://helius.dev",
             ]}
         />
     )
