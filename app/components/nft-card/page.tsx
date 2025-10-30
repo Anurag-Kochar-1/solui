@@ -4,7 +4,7 @@ import fs from 'fs'
 import { NFTCard } from '@/components/nft-card/preview'
 
 const Page = () => {
-    const codePath = path.join(process.cwd(), 'components', 'connect-wallet', 'code-sample.tsx')
+    const codePath = path.join(process.cwd(), 'components', 'nft-card', 'code-sample.tsx')
     const codeSample = fs.readFileSync(codePath, 'utf8')
     return (
         <ComponentShowcasePage
